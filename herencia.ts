@@ -31,12 +31,15 @@ class Llamador extends Empleado
     }
 }
 
+let imprimirSueldo =(empleado : Empleado) =>{
+    console.log(`El sueldo es: ${empleado.calcularSueldo()}`)
+}
+
 let mainHerencia = () => {
     let mozo = new Mesero()
     let cocinero = new Cocinero()
-    let llamado = new Llamador()
-
-    console.log(`El sueldo del mozo es ${mozo.calcularSueldo()}`)
+    let llamador = new Llamador()
+    imprimirSueldo(llamador)
 }
-
+    
 mainHerencia()
